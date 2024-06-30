@@ -1,12 +1,17 @@
 import os
 import subprocess
+import ultralytics
+
 
 HOME = os.getcwd() 
 print(HOME)
 os.chdir(HOME)
 
+"""## Test installation"""
+ultralytics.checks()
+
 """## Train model"""
-subprocess.run(['yolo','task=detect', 'mode=train', 'model=Model/yolov10b.pt','data=home/ldtan/ldtan/LP-OCR/data.yaml','epochs=300', 'batch=16', 'imgsz=640', 'save=True', 'save_period=10'])
+subprocess.run(['yolo','task=detect', 'mode=train', 'model=weight/yolov10b.pt','data=home/ldtan/ldtan/LP-OCR/data.yaml','epochs=300', 'batch=16', 'imgsz=640', 'save=True', 'save_period=10'])
 
 """## Validating model"""
 
