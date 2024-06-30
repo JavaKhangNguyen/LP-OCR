@@ -5,8 +5,8 @@ HOME = os.getcwd()
 print(HOME)
 os.chdir(HOME)
 
-"""## Train model"""
-subprocess.run(['yolo','task=detect', 'mode=train', 'model=Model/yolov10b.pt','data=home/ldtan/ldtan/LP-OCR/data.yaml','epochs=300', 'batch=16', 'imgsz=640', 'save=True', 'save_period=10'])
+# """## Train model"""
+# subprocess.run(['yolo','task=detect', 'mode=train', 'model=Model/yolov10b.pt','data=home/ldtan/ldtan/LP-OCR/data.yaml','epochs=300', 'batch=16', 'imgsz=640', 'save=True', 'save_period=10'])
 
 """## Validating model"""
 
